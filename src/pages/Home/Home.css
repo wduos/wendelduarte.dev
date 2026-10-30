@@ -1,0 +1,6 @@
+.HomeScreen .customer-list-wrp {
+  gap: var(--spacing);
+}
+.HomeScreen .customer-list-wrp > div {
+  width: 7rem;
+}
