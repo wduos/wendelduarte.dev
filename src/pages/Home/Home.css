@@ -1,7 +1,104 @@
+.HomeScreen header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.5rem;
+  padding-inline: var(--spacing);
+}
+.HomeScreen header h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.HomeScreen .banner {
+  width: 100vw;
+  padding-block: var(--spacing);
+  background-image:
+    radial-gradient(rgba(0, 0, 0, 0.05) 10%, transparent 10%),
+    radial-gradient(rgba(0, 0, 0, 0.07) 10%, transparent 10%);
+  background-position:
+    0px 0px,
+    20px 20px;
+  background-size: 40px 40px;
+  background-color: rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.07);
+}
+.HomeScreen .profile-card-wrp {
+  position: relative;
+  margin: 0 auto;
+  aspect-ratio: 2/1;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+.HomeScreen .profile-card-wrp #card-img-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+}
+.HomeScreen .profile-card-wrp #card-img {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../assets/sunrise-prainha.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.HomeScreen .profile-card-wrp #card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-self: center;
+  gap: var(--spacing);
+  width: 100%;
+  padding: var(--spacing);
+  color: white;
+}
+.HomeScreen .profile-card-wrp #card-info img {
+  height: 7rem;
+  aspect-ratio: 1/1;
+  border: solid 3px white;
+  border-radius: 50%;
+  transform: scale(-1, 1);
+}
+.HomeScreen .profile-card-wrp #card-info > div {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.HomeScreen .profile-card-wrp #card-info > div h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.HomeScreen .profile-card-wrp #card-info > div h2 {
+  font-size: 0.73rem;
+  font-weight: 400;
+}
+.HomeScreen .profile-card-wrp #card-info > div > div {
+  display: flex;
+  gap: var(--spacing);
+  margin-block: var(--spacing-1);
+}
+.HomeScreen .profile-card-wrp #card-info > div > div h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: 0.73rem;
+  font-weight: 500;
+  opacity: 0.5;
+}
+.HomeScreen .profile-card-wrp #card-info > div h3 svg {
+  fill: white;
+  height: 1rem;
+}
+
 .HomeScreen .console-wrp {
   flex-direction: column;
   width: 50%;
-  box-shadow: 0 0 20px var(--accent);
 }
 .HomeScreen .console-dragbar {
   width: 100%;

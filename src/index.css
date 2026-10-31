@@ -11,6 +11,7 @@
   --border: #dbe6ec;
   --radius: 0.25rem;
   --spacing: 0.75rem;
+  --spacing-1: 0.35rem;
 }
 
 * {
@@ -34,6 +35,10 @@ small {
   width: 1126px;
   max-width: 100%;
   margin: 0 auto;
+}
+
+.d-inline {
+  display: inline;
 }
 
 .d-flex-center {
