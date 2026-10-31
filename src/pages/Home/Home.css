@@ -1,3 +1,9 @@
+.HomeScreen .edu-card {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing);
+}
+
 .HomeScreen .customer-list-wrp {
   gap: var(--spacing);
 }
