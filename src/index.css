@@ -105,3 +105,29 @@ small {
 .yellow {
   color: var(--yellow);
 }
+
+.player {
+  position: fixed;
+  bottom: var(--spacing);
+  right: var(--spacing);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  border-radius: 3rem;
+  background-image: url(./assets/sunset-rose.webp);
+  background-position: center;
+  background-size: cover;
+  transition: width 0.3s cubic-bezier(0.77, 0.01, 0.27, 1.14);
+  cursor: pointer;
+}
+.player.mini {
+  width: 3rem;
+}
+.player.wide {
+  width: 17rem;
+}
+.player > svg {
+  fill: white;
+  height: 2rem;
+}
