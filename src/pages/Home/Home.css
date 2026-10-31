@@ -72,11 +72,11 @@
 }
 .HomeScreen .profile-card-wrp #card-info > div h1 {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 .HomeScreen .profile-card-wrp #card-info > div h2 {
-  font-size: 0.73rem;
-  font-weight: 400;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 .HomeScreen .profile-card-wrp #card-info > div > div {
   display: flex;
@@ -87,7 +87,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-1);
-  font-size: 0.73rem;
+  font-size: 0.8rem;
   font-weight: 500;
   opacity: 0.5;
 }

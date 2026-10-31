@@ -56,7 +56,7 @@ export default function Home() {
               <small>Console</small>
             </div>
             <div className="console">
-              <small>
+              <small className="code">
                 <span className="green">wendel@browser:~/Home</span>${" "}
                 <span className="yellow">projects </span> list{" "}
                 <span className="dim-1">-a</span>
