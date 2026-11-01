@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:MONO@1&family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:MONO@1&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Quicksand:wght@300..700&display=swap");
 
 :root {
   --orange: #ed7f3f;
@@ -18,11 +18,13 @@
   --accent: #188fca;
   --font-alt: #313436;
   --font: #262829;
-  --font-dim: #53585b;
+  --font-dim: #63686b;
   --font-dim-1: #a6aeb3;
+  --font-dim-2: #e2e8ec;
   --border: #dbe6ec;
   --radius1: 0.5rem;
   --radius: 0.25rem;
+  --spacing2: 2.5rem;
   --spacing1: 1.5rem;
   --spacing: 0.75rem;
   --spacing-1: 0.35rem;
@@ -35,9 +37,9 @@
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-style: normal;
   color: var(--font);
 }
@@ -46,10 +48,37 @@ small {
   font-size: 0.8rem;
 }
 
+p {
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  margin-block: var(--spacing-2);
+  list-style: none;
+}
+li svg {
+  fill: var(--font);
+  height: 1.2rem;
+}
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+
 .limiter {
   width: 1126px;
   max-width: 100%;
   margin: 0 auto;
+}
+
+.d-block {
+  display: block;
 }
 
 .d-inline {
@@ -74,6 +103,10 @@ small {
   height: 4rem;
 }
 
+.radius {
+  border-radius: var(--radius);
+}
+
 .mrg-block {
   margin-block: var(--spacing);
 }
@@ -82,6 +115,15 @@ small {
 }
 .mrg-top-1 {
   margin-top: var(--spacing1);
+}
+.mrg-top-2 {
+  margin-top: var(--spacing2);
+}
+.mrg-bottom {
+  margin-bottom: var(--spacing);
+}
+.mrg-bottom-1 {
+  margin-bottom: var(--spacing1);
 }
 
 .wrp {
@@ -112,7 +154,7 @@ small {
 }
 .section-subtitle {
   font-size: 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
   color: var(--font-dim);
 }
@@ -123,7 +165,7 @@ small {
 }
 .micro-title {
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   color: var(--font-dim);
 }
@@ -173,7 +215,13 @@ small {
   gap: var(--spacing-2);
   padding: 0.15rem 0.5rem 0.15rem 0.25rem;
   border-radius: var(--radius1);
+  background-color: var(--font-dim-2);
 }
 .badge svg {
-  height: 1.5rem;
+  fill: var(--font);
+  height: 1.3rem;
+}
+.badge p {
+  font-size: 0.8rem;
+  font-weight: 500;
 }
