@@ -2,7 +2,8 @@ import { useState } from "react";
 
 import BYULogo from "../../assets/byu-logo.png";
 import profile from "../../assets/profile.png";
-import logoFlat from "/w-logo-flat.svg";
+import logoFlatLight from "/w-logo-flat-light.svg";
+import logoFlatDark from "/w-logo-flat-dark.svg";
 
 import "./Home.css";
 
@@ -32,6 +33,7 @@ export default function Home() {
     <div className="HomeScreen">
       <section className="banner">
         <div className="profile-card-wrp limiter">
+          <img id="logo-w-light" src={logoFlatLight} alt="logo W light" />
           <div id="card-img-mask"></div>
           <div id="card-img"></div>
           <div id="card-info">
@@ -236,7 +238,7 @@ export default function Home() {
       <footer>
         <div className="limiter">
           <h2 className="quicksand generic-title mrg-bottom">
-            <img src={logoFlat} alt="Logo W" />
+            <img src={logoFlatDark} alt="Logo W" />
             Wendel Duarte dos Santos
           </h2>
 
@@ -245,7 +247,7 @@ export default function Home() {
           <small className="dim quicksand">Criado com carinho ❤</small>
           <br />
           <small className="dim quicksand">
-            Fotos e músicas de minha autoria
+            Fotos, músicas e ilustrações de minha autoria
           </small>
           <br />
           <small className="dim quicksand">
