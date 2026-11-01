@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import BYULogo from "../../assets/byu-logo.png";
 import profile from "../../assets/profile.png";
+import logoFlat from "/w-logo-flat.svg";
 
 import "./Home.css";
 
@@ -231,6 +232,35 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <footer>
+        <div className="limiter">
+          <h2 className="quicksand generic-title mrg-bottom">
+            <img src={logoFlat} alt="Logo W" />
+            Wendel Duarte dos Santos
+          </h2>
+
+          <p className="code snippet mrg-bottom">ad astra per aspera</p>
+
+          <small className="dim quicksand">Criado com carinho ❤</small>
+          <br />
+          <small className="dim quicksand">
+            Fotos e músicas de minha autoria
+          </small>
+          <br />
+          <small className="dim quicksand">
+            Crédito dos icones para{" "}
+            <a
+              className="bold"
+              href="https://fontawesome.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Font Awesome
+            </a>
+          </small>
+        </div>
+      </footer>
 
       <div
         className={playerIsWide ? "player wide" : "player mini"}

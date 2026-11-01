@@ -53,6 +53,10 @@ p {
   line-height: 1.5;
 }
 
+a {
+  color: inherit;
+}
+
 li {
   display: flex;
   align-items: center;
@@ -195,7 +199,7 @@ li svg {
   background-image: url(./assets/sunset-rose.webp);
   background-position: center;
   background-size: cover;
-  transition: width 0.3s cubic-bezier(0.77, 0.01, 0.27, 1.14);
+  transition: width 0.25s cubic-bezier(0.77, 0.01, 0.27, 1.14);
   cursor: pointer;
 }
 .player.mini {
@@ -224,4 +228,14 @@ li svg {
 .badge p {
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+.snippet {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: 0.15rem 0.5rem 0.15rem 0.25rem;
+  width: fit-content;
+  border-radius: var(--radius1);
+  background-color: var(--font-dim-1);
 }
