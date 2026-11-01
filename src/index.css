@@ -15,7 +15,8 @@
   --green-tint: #33bc6124;
   --dark-blue: #263547;
   --dark-blue-tint: #26354724;
-  --accent: #188fca;
+  --accent: #7f51ee;
+  --accent-alt: #256ba7;
   --font-alt: #313436;
   --font: #262829;
   --font-dim: #63686b;
@@ -118,6 +119,9 @@ li svg {
 .radius {
   border-radius: var(--radius);
 }
+.radius1 {
+  border-radius: var(--radius1);
+}
 
 .mrg-block {
   margin-block: var(--spacing);
@@ -187,6 +191,12 @@ li svg {
 }
 .dim-1 {
   color: var(--font-dim-1);
+}
+.accent {
+  color: var(--accent);
+}
+.accent-alt {
+  color: var(--accent-alt);
 }
 .green {
   color: var(--green);
