@@ -4,6 +4,9 @@ import BYULogo from "../../assets/byu-logo.png";
 import profile from "../../assets/profile.png";
 import logoFlatLight from "/w-logo-flat-light.svg";
 import logoFlatDark from "/w-logo-flat-dark.svg";
+import dsvLogo from "../../assets/dsv-mono-logo.svg";
+import valeLogo from "../../assets/vale-mono-logo.svg";
+import geeoLogo from "../../assets/geeo-mono-logo.svg";
 
 import "./Home.css";
 
@@ -58,7 +61,7 @@ export default function Home() {
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                     <path d="M184 120C184 89.1 209.1 64 240 64L264 64C281.7 64 296 78.3 296 96L296 544C296 561.7 281.7 576 264 576L232 576C202.2 576 177.1 555.6 170 528C169.3 528 168.7 528 168 528C123.8 528 88 492.2 88 448C88 430 94 413.4 104 400C84.6 385.4 72 362.2 72 336C72 305.1 89.6 278.2 115.2 264.9C108.1 252.9 104 238.9 104 224C104 179.8 139.8 144 184 144L184 120zM456 120L456 144C500.2 144 536 179.8 536 224C536 239 531.9 253 524.8 264.9C550.5 278.2 568 305 568 336C568 362.2 555.4 385.4 536 400C546 413.4 552 430 552 448C552 492.2 516.2 528 472 528C471.3 528 470.7 528 470 528C462.9 555.6 437.8 576 408 576L376 576C358.3 576 344 561.7 344 544L344 96C344 78.3 358.3 64 376 64L400 64C430.9 64 456 89.1 456 120z" />
                   </svg>
-                  INFP
+                  INFP-T
                 </h3>
               </div>
             </div>
@@ -181,7 +184,7 @@ export default function Home() {
         </ul>
 
         <p className="micro-title mrg-top-1">Currículo</p>
-        <div className="wrp">
+        <div className="d-iflex wrp mrg-block">
           <p className="code">add file download</p>
         </div>
       </section>
@@ -213,24 +216,18 @@ export default function Home() {
           Onde meu trabalho faz a diferença
         </h2>
         <h3 className="section-subtitle quicksand">
-          Parceiros e organizações que utilizam minhas soluções no dia a dia.
+          Alguns parceiros que utilizam minhas soluções no dia a dia
         </h3>
 
         <div className="customer-list-wrp d-flex-center mrg-block">
-          <div className="d-flex-center wrp sqr" title="DSV">
-            D
+          <div className="d-flex-center sqr" title="DSV">
+            <img className="img-m" src={dsvLogo} alt="logo da empresa DSV" />
           </div>
-          <div className="d-flex-center wrp sqr" title="Vale">
-            V
+          <div className="d-flex-center sqr" title="Vale">
+            <img className="img-m" src={valeLogo} alt="logo da empresa Vale" />
           </div>
-          <div
-            className="d-flex-center wrp sqr"
-            title="Kakaroto Sushi Delivery"
-          >
-            K
-          </div>
-          <div className="d-flex-center wrp sqr" title="GEEO+">
-            G
+          <div className="d-flex-center sqr" title="GEEO">
+            <img className="img-m" src={geeoLogo} alt="logo da empresa Geeo" />
           </div>
         </div>
       </section>
@@ -251,7 +248,7 @@ export default function Home() {
           </small>
           <br />
           <small className="dim quicksand">
-            Crédito dos icones para{" "}
+            Crédito dos ícones para{" "}
             <a
               className="bold"
               href="https://fontawesome.com/"
