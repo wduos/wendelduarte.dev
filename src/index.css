@@ -1,17 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:MONO@1&family=Quicksand:wght@300..700&display=swap");
 
 :root {
-  --yellow: #ebe825;
-  --green: #28ca5e;
+  --orange: #ed7f3f;
+  --orange-tint: #ed7f3f2e;
+  --red: #df4343;
+  --red-tint: #df43431b;
+  --blue: #4396df;
+  --blue-tint: #4396df2c;
+  --cyan: #43bbdf;
+  --cyan-tint: #43bbdf27;
+  --yellow: #cecb09;
+  --yellow-tint: #cecb0928;
+  --green: #33bc61;
+  --green-tint: #33bc6124;
+  --dark-blue: #263547;
+  --dark-blue-tint: #26354724;
   --accent: #188fca;
   --font-alt: #313436;
   --font: #262829;
   --font-dim: #53585b;
   --font-dim-1: #a6aeb3;
   --border: #dbe6ec;
+  --radius1: 0.5rem;
   --radius: 0.25rem;
+  --spacing1: 1.5rem;
   --spacing: 0.75rem;
   --spacing-1: 0.35rem;
+  --spacing-2: 0.2rem;
 }
 
 * {
@@ -51,12 +66,22 @@ small {
   flex-direction: column;
 }
 
+.flex-spacing {
+  gap: var(--spacing);
+}
+
 .img-m {
   height: 4rem;
 }
 
 .mrg-block {
   margin-block: var(--spacing);
+}
+.mrg-top {
+  margin-top: var(--spacing);
+}
+.mrg-top-1 {
+  margin-top: var(--spacing1);
 }
 
 .wrp {
@@ -66,6 +91,10 @@ small {
 }
 .sqr {
   aspect-ratio: 1/1;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .code {
@@ -91,6 +120,12 @@ small {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
+}
+.micro-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--font-dim);
 }
 
 .dim {
@@ -130,4 +165,15 @@ small {
 .player > svg {
   fill: white;
   height: 2rem;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: 0.15rem 0.5rem 0.15rem 0.25rem;
+  border-radius: var(--radius1);
+}
+.badge svg {
+  height: 1.5rem;
 }
