@@ -9,6 +9,7 @@ import logoFlatDark from "/w-logo-flat-dark.svg";
 import dsvLogo from "../../assets/dsv-mono-logo.svg";
 import valeLogo from "../../assets/vale-mono-logo.svg";
 import geeoLogo from "../../assets/geeo-mono-logo.svg";
+import labelPrinterIcon from "../../assets/label-printer-icon.png";
 
 import "./Home.css";
 
@@ -287,12 +288,23 @@ export default function Home() {
             <div className="project">
               <div className="project-image"></div>
               <div className="project-description">
-                <h2 className="generic-title quicksand bold">Label Printer</h2>
-                <h3 className="section-subtitle quicksand">
-                  Impressão de etiquetas Zebra facilitadas
-                </h3>
+                <div className="d-flex-center-gap">
+                  <img
+                    className="img-s"
+                    src={labelPrinterIcon}
+                    alt="Logo do programa"
+                  />
+                  <div>
+                    <h2 className="generic-title quicksand bold">
+                      Label Printer
+                    </h2>
+                    <h3 className="section-subtitle quicksand">
+                      Impressão de etiquetas Zebra facilitadas
+                    </h3>
+                  </div>
+                </div>
                 <h4 className="micro-title mrg-top">Stack</h4>
-                <div className="d-flex-center-gap mrg-block">
+                <div className="d-flex-center-gap">
                   <TechLabel techName="html" />
                   <TechLabel techName="css" />
                   <TechLabel techName="react" />
@@ -302,25 +314,25 @@ export default function Home() {
 
                 <h4 className="micro-title mrg-top">Descrição</h4>
                 <p>
-                  Feito em <span className="bold">Electron</span> e{" "}
-                  <span className="bold">React</span>. O Label Printer facilita
-                  o processo de impressão de etiquetas Zebra com o layout pré
-                  definido. A possibilidade de impressão em massa facilita e
-                  agiliza a operação de quem depende desse processo. O rápido
-                  processo de instalação do programa permite a inicialização
-                  rápida e a criação de atalhos na barra de tarefas. Compatível
-                  com Windows.
+                  Projetado para simplificar a impressão de etiquetas Zebra com
+                  layouts pré-definidos e suporte a impressão em massa, o
+                  programa otimiza e agiliza a rotina de quem depende desse
+                  fluxo. Conta com uma instalação rápida, fácil acesso por
+                  atalhos na barra de tarefas e total compatibilidade com
+                  Windows.
                 </p>
 
                 <h4 className="micro-title mrg-top">Acessível via</h4>
+                <TechLabel techName="windows" theme="gray" />
 
                 <h4 className="micro-title mrg-top">Impactos</h4>
                 <p>
-                  Em alguns casos, houve uma redução no processo de impressão de
-                  4 minutos, para 16 segundos com o programa.
+                  Em alguns casos, o tempo de impressão despencou de 4 minutos
+                  para apenas 16 segundos."
                 </p>
               </div>
             </div>
+
             <div className="project">a</div>
             <div className="project">a</div>
           </div>

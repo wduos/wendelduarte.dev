@@ -2,17 +2,32 @@
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-2);
+  margin-block: var(--spacing-2);
   padding: 0.15rem 0.5rem 0.15rem 0.25rem;
-  border: solid 1px var(--accent-alt);
   border-radius: var(--radius1);
-  background-color: var(--light-tint);
 }
 .techName svg {
-  fill: var(--accent);
   height: 1.3rem;
 }
 .techName p {
   font-size: 0.8rem;
   font-weight: 500;
+}
+.techName.COLOR {
+  background-color: var(--light-tint);
+}
+.techName.COLOR svg {
+  fill: var(--accent);
+}
+.techName.COLOR p {
   color: var(--accent);
+}
+.techName.GRAY {
+  background-color: var(--font-dim-2);
+}
+.techName.GRAY svg {
+  fill: var(--font);
+}
+.techName.GRAY p {
+  color: var(--font);
 }

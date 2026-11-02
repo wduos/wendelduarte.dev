@@ -116,10 +116,12 @@ li svg {
   gap: var(--spacing);
 }
 
+.img-s {
+  height: 3rem;
+}
 .img-m {
   height: 4rem;
 }
-
 .img-l {
   height: 6rem;
 }
@@ -160,7 +162,7 @@ li svg {
 }
 
 .bold {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .code {
@@ -173,7 +175,7 @@ li svg {
 
 .section-title {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 700 !important;
   line-height: 1.5;
 }
 .section-subtitle {
