@@ -12,6 +12,9 @@ import geeoLogo from "../../assets/geeo-mono-logo.svg";
 import labelPrinterIcon from "../../assets/label-printer-icon.png";
 import inspectrIcon from "../../assets/inspectr-icon.svg";
 import axionIcon from "../../assets/axion-icon.png";
+import projImgInspectr from "../../assets/proj-img-inspectr.jpg";
+import projImgLabelPrinter from "../../assets/proj-img-label-printer.jpg";
+import projImgAxion from "../../assets/proj-img-axion.jpg";
 
 import "./Home.css";
 
@@ -283,7 +286,12 @@ export default function Home() {
         {projectsAreVisible && (
           <div className="projects">
             <div className="project">
-              <div className="project-image"></div>
+              <div className="project-image">
+                <img
+                  src={projImgLabelPrinter}
+                  alt="Imagem de apresentação do projeto"
+                />
+              </div>
               <div className="project-description">
                 <div className="d-flex-center-gap">
                   <img
@@ -330,7 +338,12 @@ export default function Home() {
             </div>
 
             <div className="project">
-              <div className="project-image"></div>
+              <div className="project-image">
+                <img
+                  src={projImgInspectr}
+                  alt="Imagem de apresentação do projeto"
+                />
+              </div>
               <div className="project-description">
                 <div className="d-flex-center-gap">
                   <img
@@ -370,7 +383,12 @@ export default function Home() {
             </div>
 
             <div className="project">
-              <div className="project-image"></div>
+              <div className="project-image">
+                <img
+                  src={projImgAxion}
+                  alt="Imagem de apresentação do projeto"
+                />
+              </div>
               <div className="project-description">
                 <div className="d-flex-center-gap">
                   <img
@@ -400,7 +418,7 @@ export default function Home() {
                   com uma interface elegante, simples e de fácil compreensão.
                   Além disso, a integração com impressoras da rede local torna a
                   impressão de folhas A4 ou etiquetas Zebra um processo rápido e
-                  descomplicado."
+                  descomplicado.
                 </p>
 
                 <h4 className="micro-title mrg-top">Impactos</h4>
