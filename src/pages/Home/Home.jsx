@@ -10,6 +10,8 @@ import dsvLogo from "../../assets/dsv-mono-logo.svg";
 import valeLogo from "../../assets/vale-mono-logo.svg";
 import geeoLogo from "../../assets/geeo-mono-logo.svg";
 import labelPrinterIcon from "../../assets/label-printer-icon.png";
+import inspectrIcon from "../../assets/inspectr-icon.svg";
+import axionIcon from "../../assets/axion-icon.png";
 
 import "./Home.css";
 
@@ -165,7 +167,7 @@ export default function Home() {
       <section className="about limiter mrg-block mrg-top-2">
         <h2 className="section-title d-block quicksand">Olá, mundo!</h2>
         <h3 className="section-subtitle quicksand">
-          Um pouco sobre quem eu sou
+          Um pouco sobre quem eu sou e o que faço
         </h3>
 
         <p className="mrg-block">
@@ -242,13 +244,8 @@ export default function Home() {
         <div className="d-iflex wrp mrg-block">
           <p className="code">add file download</p>
         </div>
-      </section>
 
-      <section className="projects limiter mrg-block mrg-top-2">
-        <h2 className="section-title quicksand">Projetos</h2>
-        <h3 className="section-subtitle quicksand">
-          Algumas das minhas criações
-        </h3>
+        <p className="micro-title mrg-top">Projetos</p>
 
         <div ref={consoleRef} className="d-flex-center-center mrg-block">
           <div className="console">
@@ -299,12 +296,11 @@ export default function Home() {
                       Label Printer
                     </h2>
                     <h3 className="section-subtitle quicksand">
-                      Impressão de etiquetas Zebra facilitadas
+                      Impressão de etiquetas Zebra
                     </h3>
                   </div>
                 </div>
-                <h4 className="micro-title mrg-top">Stack</h4>
-                <div className="d-flex-center-gap">
+                <div className="d-flex-center-gap mrg-top">
                   <TechLabel techName="html" />
                   <TechLabel techName="css" />
                   <TechLabel techName="react" />
@@ -322,19 +318,101 @@ export default function Home() {
                   Windows.
                 </p>
 
-                <h4 className="micro-title mrg-top">Acessível via</h4>
-                <TechLabel techName="windows" theme="gray" />
-
                 <h4 className="micro-title mrg-top">Impactos</h4>
                 <p>
                   Em alguns casos, o tempo de impressão despencou de 4 minutos
-                  para apenas 16 segundos."
+                  para apenas 16 segundos.
                 </p>
+
+                <h4 className="micro-title mrg-top">Compatível com</h4>
+                <TechLabel techName="windows" theme="gray" />
               </div>
             </div>
 
-            <div className="project">a</div>
-            <div className="project">a</div>
+            <div className="project">
+              <div className="project-image"></div>
+              <div className="project-description">
+                <div className="d-flex-center-gap">
+                  <img
+                    className="img-s"
+                    src={inspectrIcon}
+                    alt="Logo do programa"
+                  />
+                  <div>
+                    <h2 className="generic-title quicksand bold">Inspectr</h2>
+                    <h3 className="section-subtitle quicksand">
+                      Conferência de Inbound e Outbound
+                    </h3>
+                  </div>
+                </div>
+                <div className="d-flex-center-gap mrg-top">
+                  <TechLabel techName="html" />
+                  <TechLabel techName="css" />
+                  <TechLabel techName="javascript" />
+                  <TechLabel techName="react" />
+                  <TechLabel techName="supabase" />
+                </div>
+
+                <h4 className="micro-title mrg-top">Descrição</h4>
+                <p>
+                  Desenvolvido para tornar a conferência de materiais mais
+                  rápida, precisa e confiável. O aplicativo combina uma
+                  interface intuitiva, avisos sonoros e um sistema seguro de
+                  login de usuários via Supabase.
+                </p>
+
+                <h4 className="micro-title mrg-top">Impactos</h4>
+                <p>Redução de até 84% no tempo de conferência de pallets.</p>
+
+                <h4 className="micro-title mrg-top">Compatível com</h4>
+                <TechLabel techName="browser" theme="gray" />
+              </div>
+            </div>
+
+            <div className="project">
+              <div className="project-image"></div>
+              <div className="project-description">
+                <div className="d-flex-center-gap">
+                  <img
+                    className="img-s"
+                    src={axionIcon}
+                    alt="Logo do programa"
+                  />
+                  <div>
+                    <h2 className="generic-title quicksand bold">Axion</h2>
+                    <h3 className="section-subtitle quicksand">
+                      Processamento de planilhas do Excel
+                    </h3>
+                  </div>
+                </div>
+                <div className="d-flex-center-gap mrg-top">
+                  <TechLabel techName="html" />
+                  <TechLabel techName="css" />
+                  <TechLabel techName="react" />
+                  <TechLabel techName="electron" />
+                  <TechLabel techName="node" />
+                </div>
+
+                <h4 className="micro-title mrg-top">Descrição</h4>
+                <p>
+                  Automatiza o processamento de planilhas de Excel pesadas,
+                  entregando apenas o que é relevante em poucos cliques. Conta
+                  com uma interface elegante, simples e de fácil compreensão.
+                  Além disso, a integração com impressoras da rede local torna a
+                  impressão de folhas A4 ou etiquetas Zebra um processo rápido e
+                  descomplicado."
+                </p>
+
+                <h4 className="micro-title mrg-top">Impactos</h4>
+                <p>
+                  Simplificação drástica dos processos manuais e tempo de
+                  execução reduzido de 10+ minutos para apenas 2 minutos.
+                </p>
+
+                <h4 className="micro-title mrg-top">Compatível com</h4>
+                <TechLabel techName="windows" theme="gray" />
+              </div>
+            </div>
           </div>
         )}
       </section>
