@@ -16,7 +16,9 @@
   --dark-blue: #263547;
   --dark-blue-tint: #26354724;
   --accent: #7f51ee;
-  --accent-alt: #256ba7;
+  --accent-alt: #c4abee;
+  --accent-alt1: #256ba7;
+  --light-tint: #f4eefb;
   --font-alt: #313436;
   --font: #262829;
   --font-dim: #63686b;
@@ -90,10 +92,16 @@ li svg {
   display: inline;
 }
 
-.d-flex-center {
+.d-flex-center-center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.d-flex-center-gap {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing);
 }
 
 .d-iflex {
@@ -198,6 +206,9 @@ li svg {
 .accent-alt {
   color: var(--accent-alt);
 }
+.accent-alt1 {
+  color: var(--accent-alt1);
+}
 .green {
   color: var(--green);
 }
@@ -229,23 +240,6 @@ li svg {
 .player > svg {
   fill: white;
   height: 2rem;
-}
-
-.badge {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-2);
-  padding: 0.15rem 0.5rem 0.15rem 0.25rem;
-  border-radius: var(--radius1);
-  background-color: var(--font-dim-2);
-}
-.badge svg {
-  fill: var(--font);
-  height: 1.3rem;
-}
-.badge p {
-  font-size: 0.8rem;
-  font-weight: 500;
 }
 
 .snippet {

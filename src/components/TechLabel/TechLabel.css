@@ -1,0 +1,18 @@
+.techName {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: 0.15rem 0.5rem 0.15rem 0.25rem;
+  border: solid 1px var(--accent-alt);
+  border-radius: var(--radius1);
+  background-color: var(--light-tint);
+}
+.techName svg {
+  fill: var(--accent);
+  height: 1.3rem;
+}
+.techName p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent);
+}
