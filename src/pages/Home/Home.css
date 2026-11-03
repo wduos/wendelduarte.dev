@@ -193,7 +193,7 @@
   align-items: center;
   gap: var(--spacing);
   width: calc(100% - var(--spacing) * 2);
-  max-width: 15rem;
+  max-width: 16rem;
   margin: 0 auto;
   background-image: url(../../assets/blue-sky-blur.webp);
   background-size: cover;

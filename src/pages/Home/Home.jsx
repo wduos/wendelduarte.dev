@@ -50,7 +50,7 @@ export default function Home() {
       src: song1,
     },
     {
-      title: "Motion In Emotional Hiatus",
+      title: "Emotional Hiatus",
       src: song2,
     },
     {
