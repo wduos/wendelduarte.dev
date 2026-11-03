@@ -93,6 +93,98 @@
   fill: white;
   height: 1rem;
 }
+@media screen and (width <= 1050px) {
+  .HomeScreen .profile-card-wrp #logo-w-light {
+    top: var(--spacing);
+    left: var(--spacing);
+  }
+  .HomeScreen .profile-card-wrp #card-info {
+    gap: var(--spacing);
+    padding: var(--spacing);
+  }
+  .HomeScreen .profile-card-wrp #card-info img {
+    border: solid var(--spacing-2) rgba(0, 0, 0, 0.3);
+  }
+}
+@media screen and (width <= 570px) {
+  .HomeScreen .banner {
+    padding-block: unset;
+  }
+  .HomeScreen .profile-card-wrp {
+    border-radius: unset;
+    max-width: 100%;
+  }
+  .HomeScreen .profile-card-wrp #card-info img {
+    height: 6rem;
+  }
+  .HomeScreen .profile-card-wrp #card-info > div h1 {
+    font-size: 1.3rem;
+  }
+  .HomeScreen .profile-card-wrp #card-info > div > div {
+    gap: var(--spacing-1);
+    margin-block: var(--spacing-2);
+  }
+  .HomeScreen .profile-card-wrp #card-info > div > div h3 {
+    gap: var(--spacing-2);
+  }
+}
+@media screen and (width <= 500px) {
+  .HomeScreen .banner {
+    background-image: unset;
+    background-color: white;
+    box-shadow: unset;
+  }
+  .HomeScreen .profile-card-wrp {
+    aspect-ratio: auto;
+    overflow: visible;
+  }
+  .HomeScreen .profile-card-wrp #card-img-mask {
+    display: none;
+  }
+  .HomeScreen .profile-card-wrp #card-img {
+    height: 17rem;
+  }
+  .HomeScreen .profile-card-wrp #card-info {
+    position: relative;
+    flex-direction: column;
+    padding: var(--spacing) 0 0 0;
+    width: unset;
+    color: var(--font);
+  }
+  .HomeScreen .profile-card-wrp #card-info img {
+    position: absolute;
+    top: -5rem;
+    left: 50%;
+    width: 10rem;
+    height: auto;
+    border: solid var(--spacing-2) white;
+    transform: scale(-1, 1) translateX(50%);
+  }
+  .HomeScreen .profile-card-wrp #card-info > div {
+    display: flex;
+    align-items: center;
+    margin-top: 5rem;
+  }
+  .HomeScreen .profile-card-wrp #card-info > div h1 {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  .HomeScreen .profile-card-wrp #card-info > div h2 {
+    text-align: center;
+  }
+  .HomeScreen .profile-card-wrp #card-info > div > div {
+    margin-block: var(--spacing-1);
+  }
+  .HomeScreen .profile-card-wrp #card-info > div > div h3 {
+    display: flex;
+    align-items: center;
+    opacity: 0.75;
+  }
+  .HomeScreen .profile-card-wrp #card-info > div h3 svg {
+    fill: var(--font-dim-1);
+    height: 1rem;
+  }
+}
 
 .HomeScreen .console {
   position: relative;
@@ -120,7 +212,7 @@
   border-radius: var(--radius1);
 }
 .HomeScreen .project-image {
-  width: 50%;
+  width: 46%;
   aspect-ratio: 4/3;
   background-image: linear-gradient(
     -45deg,
@@ -134,7 +226,31 @@
   width: 100%;
 }
 .HomeScreen .project-description {
-  width: 50%;
+  width: 54%;
+}
+@media screen and (width <= 1050px) {
+  .HomeScreen .projects {
+    gap: var(--spacing2);
+  }
+  .HomeScreen .project {
+    flex-direction: column;
+  }
+  .HomeScreen .project-image {
+    width: 100%;
+  }
+  .HomeScreen .project-description {
+    width: 100%;
+  }
+}
+@media screen and (width <= 472px) {
+  .HomeScreen .project {
+    padding: unset;
+    border: unset;
+    border-radius: unset;
+  }
+  .HomeScreen .project-image {
+    border-radius: var(--radius1);
+  }
 }
 
 .HomeScreen .edu-card {
@@ -169,4 +285,13 @@ footer h2 {
 }
 footer h2 img {
   height: 2.5rem;
+}
+
+@media screen and (width <= 500px) {
+  footer h2 {
+    font-size: 1.25rem !important;
+  }
+  footer h2 img {
+    height: 2rem;
+  }
 }

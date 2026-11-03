@@ -42,7 +42,7 @@ export default function Home() {
           observer.disconnect();
         }
       },
-      { threshold: 0.5 },
+      { threshold: 0.2 },
     );
 
     if (consoleRef.current) {
@@ -71,7 +71,7 @@ export default function Home() {
 
     const timeout = setTimeout(() => {
       setPhase("spinning");
-    }, 600);
+    }, 200);
 
     return () => clearTimeout(timeout);
   }, [phase]);
@@ -87,7 +87,7 @@ export default function Home() {
       clearInterval(interval);
       setPhase("done");
       setProjectsAreVisible(true);
-    }, 1500);
+    }, 1000);
 
     return () => {
       clearInterval(interval);
@@ -170,11 +170,11 @@ export default function Home() {
       <section className="about limiter mrg-block mrg-top-2">
         <h2 className="section-title d-block quicksand">Olá, mundo!</h2>
         <h3 className="section-subtitle quicksand">
-          Um pouco sobre quem eu sou e o que faço
+          Um pouco sobre quem sou e o que faço
         </h3>
 
         <p className="mrg-block">
-          Com {age} anos, sou de Macapá - AP e vivo no Sul do País desde 2017.
+          Com {age} anos, sou de Macapá - AP e moro no Sul do País desde 2017.
           Estou buscando minha primeira oportunidade em TI, com foco em
           programação, área na qual venho me aprofundando desde 2021.
         </p>
@@ -185,7 +185,7 @@ export default function Home() {
         </p>
 
         <p className="micro-title mrg-top-1">Tecnologias</p>
-        <div className="d-flex-center-gap mrg-block">
+        <div className="d-flex-center-gap mrg-block d-flex-wrap">
           <TechLabel techName="html" />
           <TechLabel techName="css" />
           <TechLabel techName="javascript" />
@@ -196,6 +196,7 @@ export default function Home() {
           <TechLabel techName="linux" />
           <TechLabel techName="windows" />
           <TechLabel techName="pi" />
+          <TechLabel techName="animate" />
         </div>
 
         <p className="micro-title mrg-top-1">Educação</p>
@@ -308,7 +309,7 @@ export default function Home() {
                     </h3>
                   </div>
                 </div>
-                <div className="d-flex-center-gap mrg-top">
+                <div className="d-flex-center-gap mrg-top d-flex-wrap">
                   <TechLabel techName="html" />
                   <TechLabel techName="css" />
                   <TechLabel techName="react" />
@@ -320,16 +321,14 @@ export default function Home() {
                 <p>
                   Projetado para simplificar a impressão de etiquetas Zebra com
                   layouts pré-definidos e suporte a impressão em massa, o
-                  programa otimiza e agiliza a rotina de quem depende desse
-                  fluxo. Conta com uma instalação rápida, fácil acesso por
-                  atalhos na barra de tarefas e total compatibilidade com
-                  Windows.
+                  programa otimiza a rotina de quem depende desse fluxo. Conta
+                  com uma instalação rápida e total compatibilidade com Windows.
                 </p>
 
                 <h4 className="micro-title mrg-top">Impactos</h4>
                 <p>
-                  Em alguns casos, o tempo de impressão despencou de 4 minutos
-                  para apenas 16 segundos.
+                  Em alguns tipos de etiqueta, o tempo de impressão despencou de
+                  4 minutos para apenas 16 segundos.
                 </p>
 
                 <h4 className="micro-title mrg-top">Compatível com</h4>
@@ -358,7 +357,7 @@ export default function Home() {
                     </h3>
                   </div>
                 </div>
-                <div className="d-flex-center-gap mrg-top">
+                <div className="d-flex-center-gap mrg-top d-flex-wrap">
                   <TechLabel techName="html" />
                   <TechLabel techName="css" />
                   <TechLabel techName="javascript" />
@@ -403,7 +402,7 @@ export default function Home() {
                     </h3>
                   </div>
                 </div>
-                <div className="d-flex-center-gap mrg-top">
+                <div className="d-flex-center-gap mrg-top d-flex-wrap">
                   <TechLabel techName="html" />
                   <TechLabel techName="css" />
                   <TechLabel techName="react" />
@@ -413,11 +412,11 @@ export default function Home() {
 
                 <h4 className="micro-title mrg-top">Descrição</h4>
                 <p>
-                  Automatiza o processamento de planilhas de Excel pesadas,
-                  entregando apenas o que é relevante em poucos cliques. Conta
-                  com uma interface elegante, simples e de fácil compreensão.
-                  Além disso, a integração com impressoras da rede local torna a
-                  impressão de folhas A4 ou etiquetas Zebra um processo rápido e
+                  Com uma interface elegante, simples e de fácil compreensão, o
+                  Axion automatiza o processamento de planilhas do Excel,
+                  entregando apenas o que é importante em poucos cliques. Possui
+                  integração com impressoras da rede local, tornando a impressão
+                  de folhas A4 ou etiquetas Zebra um processo rápido e
                   descomplicado.
                 </p>
 
