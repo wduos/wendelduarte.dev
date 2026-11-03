@@ -15,6 +15,12 @@ import axionIcon from "../../assets/axion-icon.png";
 import projImgInspectr from "../../assets/proj-img-inspectr.jpg";
 import projImgLabelPrinter from "../../assets/proj-img-label-printer.jpg";
 import projImgAxion from "../../assets/proj-img-axion.jpg";
+import sunsetRoseSqr from "../../assets/sunset-rose-sqr.webp";
+
+import song1 from "../../assets/music/drown.mp3";
+import song2 from "../../assets/music/motion.mp3";
+import song3 from "../../assets/music/windchime.mp3";
+import song4 from "../../assets/music/caier.mp3";
 
 import "./Home.css";
 
@@ -32,6 +38,84 @@ export default function Home() {
   const [spinnerIndex, setSpinnerIndex] = useState(0);
 
   const [projectsAreVisible, setProjectsAreVisible] = useState(false);
+
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+
+  const playlist = [
+    {
+      title: "Drown",
+      src: song1,
+    },
+    {
+      title: "Motion In Emotional Hiatus",
+      src: song2,
+    },
+    {
+      title: "Windchime",
+      src: song3,
+    },
+    {
+      title: "no title",
+      src: song4,
+    },
+  ];
+
+  const audioRef = useRef(null);
+  const currentTrack = playlist[currentTrackIndex];
+
+  const togglePlayPause = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleTimeUpdate = () => {
+    setCurrentTime(audioRef.current.currentTime);
+  };
+
+  const handleLoadedMetadata = () => {
+    setDuration(audioRef.current.duration);
+  };
+
+  const handleSeek = (e) => {
+    const newTime = e.target.value;
+    audioRef.current.currentTime = newTime;
+    setCurrentTime(newTime);
+  };
+
+  const handleNext = () => {
+    const isLastSong = currentTrackIndex === playlist.length - 1;
+
+    if (!isLastSong) {
+      setCurrentTrackIndex(currentTrackIndex + 1);
+      return;
+    }
+
+    setIsPlaying(false);
+  };
+
+  const handlePrev = () => {
+    setCurrentTrackIndex(currentTrackIndex - 1);
+  };
+
+  useEffect(() => {
+    if (isPlaying) {
+      audioRef.current.play();
+    }
+  }, [currentTrackIndex]);
+
+  const formatTime = (seconds) => {
+    if (isNaN(seconds)) return "0:00";
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs < 10 ? "0" : ""}${secs}`;
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -199,7 +283,81 @@ export default function Home() {
           <TechLabel techName="animate" />
         </div>
 
-        <p className="micro-title mrg-top-1">Educação</p>
+        <p className="micro-title mrg-top-1">Músicas</p>
+        <div className={isPlaying ? "music-player playing" : "music-player"}>
+          <audio
+            ref={audioRef}
+            src={currentTrack.src}
+            onTimeUpdate={handleTimeUpdate}
+            onLoadedMetadata={handleLoadedMetadata}
+            onEnded={handleNext}
+          ></audio>
+
+          <div>
+            <div className="control-btns d-flex-center-center">
+              <button
+                className="d-flex-center-center"
+                type="button"
+                onClick={handlePrev}
+                disabled={currentTrackIndex === 0}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                  <path d="M491 100.8C478.1 93.8 462.3 94.5 450 102.6L192 272.1L192 128C192 110.3 177.7 96 160 96C142.3 96 128 110.3 128 128L128 512C128 529.7 142.3 544 160 544C177.7 544 192 529.7 192 512L192 367.9L450 537.5C462.3 545.6 478 546.3 491 539.3C504 532.3 512 518.8 512 504.1L512 136.1C512 121.4 503.9 107.9 491 100.9z" />
+                </svg>
+              </button>
+              <button
+                className="d-flex-center-center"
+                type="button"
+                onClick={togglePlayPause}
+              >
+                {isPlaying ? (
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path d="M176 96C149.5 96 128 117.5 128 144L128 496C128 522.5 149.5 544 176 544L240 544C266.5 544 288 522.5 288 496L288 144C288 117.5 266.5 96 240 96L176 96zM400 96C373.5 96 352 117.5 352 144L352 496C352 522.5 373.5 544 400 544L464 544C490.5 544 512 522.5 512 496L512 144C512 117.5 490.5 96 464 96L400 96z" />
+                  </svg>
+                ) : (
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path d="M187.2 100.9C174.8 94.1 159.8 94.4 147.6 101.6C135.4 108.8 128 121.9 128 136L128 504C128 518.1 135.5 531.2 147.6 538.4C159.7 545.6 174.8 545.9 187.2 539.1L523.2 355.1C536 348.1 544 334.6 544 320C544 305.4 536 291.9 523.2 284.9L187.2 100.9z" />
+                  </svg>
+                )}
+              </button>
+              <button
+                className="d-flex-center-center"
+                type="button"
+                onClick={handleNext}
+                disabled={currentTrackIndex === playlist.length - 1}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                  <path d="M149 100.8C161.9 93.8 177.7 94.5 190 102.6L448 272.1L448 128C448 110.3 462.3 96 480 96C497.7 96 512 110.3 512 128L512 512C512 529.7 497.7 544 480 544C462.3 544 448 529.7 448 512L448 367.9L190 537.5C177.7 545.6 162 546.3 149 539.3C136 532.3 128 518.7 128 504L128 136C128 121.3 136.1 107.8 149 100.8z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div className="mp-selectors d-flex-center-gap">
+            {playlist.map((song, index) => (
+              <div
+                key={index}
+                className={
+                  currentTrackIndex === index ? "selector active" : "selector"
+                }
+              ></div>
+            ))}
+          </div>
+
+          <div className="info-wrp d-flex-center-gap">
+            <small className="quicksand bold white">{currentTrack.title}</small>
+            <small className="quicksand white">
+              {formatTime(currentTime)}/{formatTime(duration)}
+            </small>
+          </div>
+        </div>
+
+        <p
+          className="micro-title mrg-top-2"
+          style={isPlaying ? { marginTop: "1.75rem" } : undefined}
+        >
+          Educação
+        </p>
         <div className="edu-card mrg-top">
           <img className="img-m radius" src={BYULogo} alt="byu-icon" />
 
@@ -483,15 +641,6 @@ export default function Home() {
           </small>
         </div>
       </footer>
-
-      <div
-        className={playerIsWide ? "player wide" : "player mini"}
-        onClick={() => setPlayerIsWide(!playerIsWide)}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-          <path d="M144 288C144 190.8 222.8 112 320 112C417.2 112 496 190.8 496 288L496 332.8C481.9 324.6 465.5 320 448 320L432 320C405.5 320 384 341.5 384 368L384 496C384 522.5 405.5 544 432 544L448 544C501 544 544 501 544 448L544 288C544 164.3 443.7 64 320 64C196.3 64 96 164.3 96 288L96 448C96 501 139 544 192 544L208 544C234.5 544 256 522.5 256 496L256 368C256 341.5 234.5 320 208 320L192 320C174.5 320 158.1 324.7 144 332.8L144 288zM144 416C144 389.5 165.5 368 192 368L208 368L208 496L192 496C165.5 496 144 474.5 144 448L144 416zM496 416L496 448C496 474.5 474.5 496 448 496L432 496L432 368L448 368C474.5 368 496 389.5 496 416z" />
-        </svg>
-      </div>
     </div>
   );
 }

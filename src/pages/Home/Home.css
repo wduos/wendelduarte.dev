@@ -142,7 +142,7 @@
     display: none;
   }
   .HomeScreen .profile-card-wrp #card-img {
-    height: 17rem;
+    height: 15rem;
   }
   .HomeScreen .profile-card-wrp #card-info {
     position: relative;
@@ -186,6 +186,88 @@
   }
 }
 
+.HomeScreen .music-player {
+  position: relative;
+  top: var(--spacing);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing);
+  width: calc(100% - var(--spacing) * 2);
+  max-width: 15rem;
+  margin: 0 auto;
+  background-image: url(../../assets/blue-sky-blur.webp);
+  background-size: cover;
+  background-position: center;
+  padding: var(--spacing);
+  border-radius: 5rem;
+  z-index: 100;
+}
+.HomeScreen .music-player *:focus {
+  outline: none !important;
+  box-shadow: 0 0 12px white;
+}
+.HomeScreen .music-player.playing {
+  position: sticky;
+  top: var(--spacing);
+  margin-top: var(--spacing);
+}
+.HomeScreen .music-player .control-btns {
+  gap: var(--spacing);
+}
+.HomeScreen .music-player .control-btns button {
+  aspect-ratio: 1/1;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.HomeScreen .music-player .control-btns button svg {
+  fill: white;
+  height: 0.8rem;
+}
+.HomeScreen .music-player .control-btns button:disabled {
+  opacity: 0.5;
+}
+.HomeScreen .music-player .control-btns button:disabled svg {
+  fill: var(--font-dim-2);
+}
+.HomeScreen .music-player .control-btns button:nth-child(1),
+.HomeScreen .music-player .control-btns button:nth-child(3) {
+  height: 1.75rem;
+}
+.HomeScreen .music-player .control-btns button:nth-child(2) {
+  height: 2.3rem;
+  background-color: white;
+}
+.HomeScreen .music-player .control-btns button:nth-child(2) svg {
+  fill: var(--font);
+  height: 1.5rem;
+}
+
+.HomeScreen .music-player .mp-selectors {
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.HomeScreen .music-player .selector {
+  height: var(--spacing-2);
+  width: var(--spacing-2);
+  border-radius: var(--radius);
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 0.3s width cubic-bezier(0.34, 0.22, 0.02, 1.37);
+}
+.HomeScreen .music-player .selector.active {
+  width: var(--spacing1);
+  height: var(--spacing-1);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.HomeScreen .music-player .info-wrp {
+  width: 100%;
+  flex-direction: column;
+}
+
 .HomeScreen .console {
   position: relative;
   width: 100%;
@@ -195,19 +277,22 @@
   background-color: white;
   border: solid 1px var(--border);
   border-radius: var(--radius1);
-  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
 
 .HomeScreen .projects {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--spacing);
+  z-index: 10;
 }
 .HomeScreen .project {
   display: flex;
   align-items: flex-start;
   gap: var(--spacing);
   padding: var(--spacing);
+  background-color: white;
   border: solid 1px var(--border);
   border-radius: var(--radius1);
 }

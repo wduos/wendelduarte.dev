@@ -31,7 +31,7 @@
   --spacing1: 1.5rem;
   --spacing: 0.75rem;
   --spacing-1: 0.5rem;
-  --spacing-2: 0.2rem;
+  --spacing-2: 0.25rem;
 }
 
 * {
@@ -70,6 +70,10 @@ li {
 li svg {
   fill: var(--font);
   height: 1.2rem;
+}
+
+*:focus {
+  outline: solid var(--spacing-2) var(--accent);
 }
 
 .quicksand {
@@ -226,31 +230,8 @@ li svg {
 .yellow {
   color: var(--yellow);
 }
-
-.player {
-  position: fixed;
-  bottom: var(--spacing);
-  right: var(--spacing);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 3rem;
-  border-radius: 3rem;
-  background-image: url(./assets/sunset-rose.webp);
-  background-position: center;
-  background-size: cover;
-  transition: width 0.25s cubic-bezier(0.77, 0.01, 0.27, 1.14);
-  cursor: pointer;
-}
-.player.mini {
-  width: 3rem;
-}
-.player.wide {
-  width: 17rem;
-}
-.player > svg {
-  fill: white;
-  height: 2rem;
+.white {
+  color: white;
 }
 
 .snippet {
