@@ -73,7 +73,33 @@ li svg {
 }
 
 *:focus {
-  outline: solid var(--spacing-2) var(--accent);
+  outline: none;
+  box-shadow: 0 0 5px var(--accent);
+}
+
+.a-blank {
+  text-decoration: none;
+}
+.a-blank::after {
+  content: "";
+  display: inline-block;
+  height: 1rem;
+  aspect-ratio: 1/1;
+  margin-left: var(--spacing-2);
+  background-image: url(./assets/link-icon.svg);
+  background-size: contain;
+}
+.a-blank-s {
+  text-decoration: none;
+}
+.a-blank-s::after {
+  content: "";
+  display: inline-block;
+  height: 0.8rem;
+  aspect-ratio: 1/1;
+  margin-left: var(--spacing-2);
+  background-image: url(./assets/link-icon.svg);
+  background-size: contain;
 }
 
 .quicksand {

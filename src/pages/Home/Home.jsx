@@ -12,9 +12,11 @@ import geeoLogo from "../../assets/geeo-mono-logo.svg";
 import labelPrinterIcon from "../../assets/label-printer-icon.png";
 import inspectrIcon from "../../assets/inspectr-icon.svg";
 import axionIcon from "../../assets/axion-icon.png";
+import geeoIcon from "../../assets/geeo-icon.svg";
 import projImgInspectr from "../../assets/proj-img-inspectr.jpg";
 import projImgLabelPrinter from "../../assets/proj-img-label-printer.jpg";
 import projImgAxion from "../../assets/proj-img-axion.jpg";
+import projImgGeeo from "../../assets/proj-img-geeo.jpg";
 import sunsetRoseSqr from "../../assets/sunset-rose-sqr.webp";
 
 import song1 from "../../assets/music/drown.mp3";
@@ -273,6 +275,7 @@ export default function Home() {
           <TechLabel techName="html" />
           <TechLabel techName="css" />
           <TechLabel techName="javascript" />
+          <TechLabel techName="typescript" />
           <TechLabel techName="react" />
           <TechLabel techName="electron" />
           <TechLabel techName="node" />
@@ -281,6 +284,7 @@ export default function Home() {
           <TechLabel techName="windows" />
           <TechLabel techName="pi" />
           <TechLabel techName="animate" />
+          <TechLabel techName="fl" />
         </div>
 
         <p className="micro-title mrg-top-1">Músicas</p>
@@ -468,8 +472,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="d-flex-center-gap mrg-top d-flex-wrap">
-                  <TechLabel techName="html" />
                   <TechLabel techName="css" />
+                  <TechLabel techName="typescript" />
                   <TechLabel techName="react" />
                   <TechLabel techName="electron" />
                   <TechLabel techName="node" />
@@ -516,7 +520,6 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="d-flex-center-gap mrg-top d-flex-wrap">
-                  <TechLabel techName="html" />
                   <TechLabel techName="css" />
                   <TechLabel techName="javascript" />
                   <TechLabel techName="react" />
@@ -561,8 +564,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="d-flex-center-gap mrg-top d-flex-wrap">
-                  <TechLabel techName="html" />
                   <TechLabel techName="css" />
+                  <TechLabel techName="typescript" />
                   <TechLabel techName="react" />
                   <TechLabel techName="electron" />
                   <TechLabel techName="node" />
@@ -586,6 +589,58 @@ export default function Home() {
 
                 <h4 className="micro-title mrg-top">Compatível com</h4>
                 <TechLabel techName="windows" theme="gray" />
+              </div>
+            </div>
+
+            <div className="project">
+              <div className="project-image">
+                <img
+                  src={projImgGeeo}
+                  alt="Imagem de apresentação do projeto"
+                />
+              </div>
+              <div className="project-description">
+                <div className="d-flex-center-gap">
+                  <img
+                    className="img-s"
+                    src={geeoIcon}
+                    alt="Logo do programa"
+                  />
+                  <div>
+                    <h2 className="generic-title quicksand bold">GEEO</h2>
+                    <h3 className="section-subtitle quicksand">
+                      Landing Page Empresarial
+                    </h3>
+                  </div>
+                </div>
+                <div className="d-flex-center-gap mrg-top d-flex-wrap">
+                  <TechLabel techName="css" />
+                  <TechLabel techName="javascript" />
+                  <TechLabel techName="react" />
+                  <TechLabel techName="animate" />
+                </div>
+
+                <h4 className="micro-title mrg-top">Descrição</h4>
+                <p>
+                  <a
+                    className="bold accent a-blank"
+                    href="https://empresa.geeo.com.br/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Landing Page
+                  </a>{" "}
+                  com design limpo e intuitivo que modernizou a presença digital
+                  da empresa. Também fui responsável pelo rebranding e criação
+                  da nova logomarca, conferindo à marca uma identidade mais
+                  marcante e memorável.
+                </p>
+
+                <h4 className="micro-title mrg-top">Impactos</h4>
+                <p>Aumento da clareza da informação e modernização da marca.</p>
+
+                <h4 className="micro-title mrg-top">Compatível com</h4>
+                <TechLabel techName="browser" theme="gray" />
               </div>
             </div>
           </div>
@@ -631,7 +686,7 @@ export default function Home() {
           <small className="dim quicksand">
             Crédito dos ícones para{" "}
             <a
-              className="bold"
+              className="bold accent a-blank-s"
               href="https://fontawesome.com/"
               target="_blank"
               rel="noopener noreferrer"
