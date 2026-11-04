@@ -270,23 +270,6 @@ export default function Home() {
           jogando videogame, estudando algo novo ou na academia.
         </p>
 
-        <p className="micro-title mrg-top-1">Tecnologias</p>
-        <div className="d-flex-center-gap mrg-block d-flex-wrap">
-          <TechLabel techName="html" />
-          <TechLabel techName="css" />
-          <TechLabel techName="javascript" />
-          <TechLabel techName="typescript" />
-          <TechLabel techName="react" />
-          <TechLabel techName="electron" />
-          <TechLabel techName="node" />
-          <TechLabel techName="git" />
-          <TechLabel techName="linux" />
-          <TechLabel techName="windows" />
-          <TechLabel techName="pi" />
-          <TechLabel techName="animate" />
-          <TechLabel techName="fl" />
-        </div>
-
         <p className="micro-title mrg-top-1">Músicas</p>
         <div className={isPlaying ? "music-player playing" : "music-player"}>
           <audio
@@ -355,13 +338,39 @@ export default function Home() {
             </small>
           </div>
         </div>
-
         <p
           className="micro-title mrg-top-2"
           style={isPlaying ? { marginTop: "1.75rem" } : undefined}
         >
-          Educação
+          Entendimento de
         </p>
+        <div className="d-flex-center-gap mrg-block d-flex-wrap">
+          <TechLabel techName="html" />
+          <TechLabel techName="css" />
+          <TechLabel techName="javascript" />
+          <TechLabel techName="react" />
+          <TechLabel techName="electron" />
+          <TechLabel techName="node" />
+          <TechLabel techName="git" />
+          <TechLabel techName="linux" />
+          <TechLabel techName="windows" />
+          <TechLabel techName="animate" />
+          <TechLabel techName="fl" />
+        </div>
+
+        <p className="micro-title mrg-top-1">Noções Básicas</p>
+        <div className="d-flex-center-gap mrg-block d-flex-wrap">
+          <TechLabel theme="gray" techName="typescript" />
+          <TechLabel theme="gray" techName="python" />
+          <TechLabel theme="gray" techName="prisma" />
+          <TechLabel theme="gray" techName="postgres" />
+          <TechLabel theme="gray" techName="vue" />
+          <TechLabel theme="gray" techName="docker" />
+          <TechLabel theme="gray" techName="native" />
+          <TechLabel theme="gray" techName="pi" />
+        </div>
+
+        <p className="micro-title mrg-top-1">Educação</p>
         <div className="edu-card mrg-top">
           <img className="img-m radius" src={BYULogo} alt="byu-icon" />
 
