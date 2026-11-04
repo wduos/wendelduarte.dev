@@ -536,7 +536,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="d-flex-center-gap mrg-top d-flex-wrap">
+                  <TechLabel techName="html" />
                   <TechLabel techName="css" />
+                  <TechLabel techName="javascript" />
                   <TechLabel techName="typescript" />
                   <TechLabel techName="react" />
                   <TechLabel techName="electron" />
@@ -584,6 +586,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="d-flex-center-gap mrg-top d-flex-wrap">
+                  <TechLabel techName="html" />
                   <TechLabel techName="css" />
                   <TechLabel techName="javascript" />
                   <TechLabel techName="react" />
@@ -628,7 +631,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="d-flex-center-gap mrg-top d-flex-wrap">
+                  <TechLabel techName="html" />
                   <TechLabel techName="css" />
+                  <TechLabel techName="javascript" />
                   <TechLabel techName="typescript" />
                   <TechLabel techName="react" />
                   <TechLabel techName="electron" />
@@ -678,6 +683,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="d-flex-center-gap mrg-top d-flex-wrap">
+                  <TechLabel techName="html" />
                   <TechLabel techName="css" />
                   <TechLabel techName="javascript" />
                   <TechLabel techName="react" />
