@@ -342,7 +342,7 @@ export default function Home() {
           className="micro-title mrg-top-2"
           style={isPlaying ? { marginTop: "1.75rem" } : undefined}
         >
-          Entendimento de
+          Tecnologias
         </p>
         <div className="d-flex-center-gap mrg-block d-flex-wrap">
           <TechLabel techName="html" />
@@ -356,18 +356,14 @@ export default function Home() {
           <TechLabel techName="windows" />
           <TechLabel techName="animate" />
           <TechLabel techName="fl" />
-        </div>
-
-        <p className="micro-title mrg-top-1">Noções Básicas</p>
-        <div className="d-flex-center-gap mrg-block d-flex-wrap">
-          <TechLabel theme="gray" techName="typescript" />
-          <TechLabel theme="gray" techName="python" />
-          <TechLabel theme="gray" techName="native" />
-          <TechLabel theme="gray" techName="prisma" />
-          <TechLabel theme="gray" techName="postgres" />
-          <TechLabel theme="gray" techName="vue" />
-          <TechLabel theme="gray" techName="docker" />
-          <TechLabel theme="gray" techName="pi" />
+          <TechLabel techName="typescript" />
+          <TechLabel techName="python" />
+          <TechLabel techName="native" />
+          <TechLabel techName="prisma" />
+          <TechLabel techName="postgres" />
+          <TechLabel techName="vue" />
+          <TechLabel techName="docker" />
+          <TechLabel techName="pi" />
         </div>
 
         <p className="micro-title mrg-top-1">Educação</p>
@@ -464,9 +460,20 @@ export default function Home() {
         <br />
 
         <p className="micro-title mrg-top-1">Currículo</p>
-        <div className="d-iflex wrp mrg-block">
-          <p className="code">add file download</p>
-        </div>
+        <a
+          className="wrp mrg-block d-iflex-center-gap bold"
+          href="/wendel.pdf"
+          download="Cúrriculo - Wendel Duarte dos Santos"
+        >
+          Baixar PDF
+          <svg
+            className="icon-f"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 640"
+          >
+            <path d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM303 505C312.4 514.4 327.6 514.4 336.9 505L400.9 441C410.3 431.6 410.3 416.4 400.9 407.1C391.5 397.8 376.3 397.7 367 407.1L344 430.1L344 344C344 330.7 333.3 320 320 320C306.7 320 296 330.7 296 344L296 430.1L273 407.1C263.6 397.7 248.4 397.7 239.1 407.1C229.8 416.5 229.7 431.7 239.1 441L303.1 505z" />
+          </svg>
+        </a>
 
         <p className="micro-title mrg-top">Projetos</p>
 

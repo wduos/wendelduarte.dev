@@ -58,6 +58,7 @@ p {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 li {
@@ -212,6 +213,11 @@ li svg {
 
 .icon {
   height: 1.2rem;
+  fill: var(--accent);
+}
+.icon-f {
+  height: 1.2rem;
+  fill: var(--font);
 }
 
 .wrp {
